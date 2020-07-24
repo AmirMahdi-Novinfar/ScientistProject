@@ -1,0 +1,5 @@
+<resources>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="lt_button_xa_android_layout_width_quot_113dp_quot_xa_android_layout_height_quot_90dp_quot_xa_android_layout_alignparentright_quot_true_quot_xa_android_layout_alignparentbottom_quot_true_quot_xa_android_background_quot_drawable_ic_home_quot"><![CDATA[<Button\n android:layout_width=\"113dp\"\n android:layout_height=\"90dp\"\n android:layout_alignParentRight=\"true\"\n android:layout_alignParentBottom=\"true\"\n android:background=\"@drawable/ic_home\"]]></string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/uggu"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/dfsfsdf"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:src="@drawable/ic_verified"
+            android:scaleType="fitXY">
+
+        </ImageView>
+
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="282dp"
+        android:fontFamily="@font/dfds"
+        android:hint="نام خود را وارد کنید"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:textColorHint="@android:color/black">
+
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_name"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="151dp"
+        android:background="@drawable/hfhtyhjty"
+        android:fontFamily="@font/dfds"
+        android:text="ورود به برنامه">
+
+    </Button>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="15dp"
+        android:layoutDirection="rtl"
+
+        android:textDirection="rtl" />
+
+
+</RelativeLayout>

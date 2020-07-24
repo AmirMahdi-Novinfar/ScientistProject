@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginTop="20dp"
+      android:layout_margin="30dp"
+      android:id="@+id/txt_search"
+      android:hint="جستجو کنید.."
+      android:textColorHint="@android:color/white"
+      android:fontFamily="@font/dfds"
+      android:textSize="13dp"
+      android:textColor="@android:color/white"
+      android:background="@drawable/hkj"
+      android:drawableLeft="@drawable/ic_search"
+      android:paddingLeft="20dp"
+      android:paddingRight="20dp"
+     />
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+    android:layout_below="@id/txt_search">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      android:id="@+id/recycler_id">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+  </LinearLayout>
+
+
+</RelativeLayout>
