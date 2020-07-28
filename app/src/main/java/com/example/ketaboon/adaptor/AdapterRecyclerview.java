@@ -67,6 +67,11 @@ public class AdapterRecyclerview extends RecyclerView.Adapter {
         return personList.size();
     }
 
+    public void filterlist(List<Person> filterlist) {
+        personList=filterlist;
+        notifyDataSetChanged();
+    }
+
 
     public class Itemviewholder extends RecyclerView.ViewHolder {
         CircleImageView imageView;
@@ -81,8 +86,10 @@ public class AdapterRecyclerview extends RecyclerView.Adapter {
              linearLayout=itemView.findViewById(R.id.itemrecv);
 
         }
-    }{
+
 
 
     }
+
+
 }

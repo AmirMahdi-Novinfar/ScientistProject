@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_bg"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center" android:background="@color/colorAccent">
+    android:background="#4D5151"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/img_search"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:id="@+id/img_search"
         android:layout_marginLeft="30dp"
-        android:src="@drawable/ic_search"
-        ></ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="نام دانشمند را وارد کنید"
-            android:layout_below="@id/img_search"
-            android:fontFamily="@font/dfds"
-            android:textSize="20dp"></TextView>
+        android:src="@drawable/ic_search"></ImageView>
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_search"
+        android:fontFamily="@font/dfds"
+        android:text="نام دانشمند را وارد کنید"
+        android:textSize="20dp"></TextView>
+
+</LinearLayout>
