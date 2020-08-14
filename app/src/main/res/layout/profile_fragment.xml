@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="#2b2b2b"
     android:theme="@style/AppTheme"
     android:orientation="vertical">
 
@@ -52,6 +52,10 @@
             android:textSize="15dp" />
 
     </LinearLayout>
+
+
+    <include layout="@layout/profile_gb"
+       ></include>
 
     <LinearLayout
         android:layout_width="match_parent"

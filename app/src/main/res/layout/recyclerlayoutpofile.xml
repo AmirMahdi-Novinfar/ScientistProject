@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_id_rec"
+    android:layout_width="match_parent"
+    android:layout_height="215dp"
+    android:elevation="2dp"
+    android:layout_margin="2dp"
+    app:cardBackgroundColor="#2b2b2b"
+    app:cardCornerRadius="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dfsfsdf"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_personamir22"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                >
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_name_title22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dfds"
+            android:text="امیرمهدی"
+            android:textColor="@android:color/white"
+            android:textSize="25sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

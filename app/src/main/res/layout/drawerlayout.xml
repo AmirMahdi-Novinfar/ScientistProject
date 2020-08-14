@@ -26,6 +26,17 @@
         app:menu="@menu/nav_menu"
       >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ورژن 1.1.0"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="720dp"
+            android:layout_marginRight="90dp"
+            android:textSize="20sp">
+
+        </TextView>
+
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
