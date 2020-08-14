@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    TextView txt_name_amir,txt_job_novin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +42,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.drawerlayout);
         toolbar = (Toolbar) findViewById(R.id.toolbaramir);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
 
         b1_nav = (BottomNavigationView) findViewById(R.id.btn_nav);
         frameLayout = (FrameLayout) findViewById(R.id.fram);
         navigationView = (NavigationView) findViewById(R.id.nav_main);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
-        ImageView imageButton=(ImageView) findViewById(R.id.nav_btn);
+        ImageView imageButton = (ImageView) findViewById(R.id.nav_btn);
 
-        SharedPreferences sharedPreferences=getSharedPreferences("Login",MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
         final String txtnamkke = sharedPreferences.getString("usr_name", "null");
         final String txtjon = sharedPreferences.getString("shoghl", "null");
-
 
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -69,9 +68,36 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         });
 
 
-
         b1_nav.setOnNavigationItemSelectedListener(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Homefragment()).commit();
+        navigationView.setCheckedItem(0);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                int ali = item.getItemId();
+                switch (ali) {
+
+                    case R.id.home_btn_h:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Homefragment()).commit();
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.home_btn_s:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Searchefragment()).commit();
+                        drawerLayout.closeDrawers();
+
+                        break;
+                    case R.id.home_btn_p:
+
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Profilefragment()).commit();
+                        drawerLayout.closeDrawers();
+                        break;
+
+
+                }
+                return true;
+            }
+        });
 
     }
 
@@ -87,10 +113,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
             case R.id.home_btn_s:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Searchefragment()).commit();
-
-
                 break;
-
             case R.id.home_btn_p:
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Profilefragment()).commit();
@@ -101,8 +124,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
         return true;
-    }
 
+
+    }
 
 
 }
