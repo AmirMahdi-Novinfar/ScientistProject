@@ -8,19 +8,13 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.ketaboon.R;
 import com.example.ketaboon.activity.ContentActivity;
 import com.example.ketaboon.model.Person;
-import com.sdsmdg.tastytoast.TastyToast;
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AdapterRecyclerview extends RecyclerView.Adapter {
@@ -57,6 +51,7 @@ public class AdapterRecyclerview extends RecyclerView.Adapter {
                 intent.putExtra("name",personList.get(position).getName());
                 intent.putExtra("field",personList.get(position).getField());
                 intent.putExtra("disk",personList.get(position).getDisc());
+                intent.putExtra("id",personList.get(position).getId());
                 context.startActivity(intent);
             }
         });
