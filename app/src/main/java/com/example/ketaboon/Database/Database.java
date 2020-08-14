@@ -74,15 +74,15 @@ public class Database extends SQLiteOpenHelper {
     }
 
 
-    public List<Person> getallperson(){
+    public List<Person> getallperson() {
 
-        SQLiteDatabase database=this.getReadableDatabase();
-        List<Person> data=new ArrayList<>();
-        String query="SELECT * FROM person";
-        Cursor cursor=database.rawQuery(query,null);
-        if (cursor.moveToFirst()){
+        SQLiteDatabase database = this.getReadableDatabase();
+        List<Person> data = new ArrayList<>();
+        String query = "SELECT * FROM person";
+        Cursor cursor = database.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
             do {
-                Person person=new Person();
+                Person person = new Person();
                 person.setId(cursor.getInt(cursor.getColumnIndex(info_db.DATA_ID)));
                 person.setCategory(cursor.getString(cursor.getColumnIndex(info_db.DATA_CATEGORY)));
                 person.setName(cursor.getString(cursor.getColumnIndex(info_db.DATA_NAME)));
@@ -91,7 +91,8 @@ public class Database extends SQLiteOpenHelper {
                 person.setImage(cursor.getString(cursor.getColumnIndex(info_db.DATA_IMAGE)));
                 person.setFav(cursor.getInt(cursor.getColumnIndex(info_db.DATA_FAV)));
                 data.add(person);
-            }while (cursor.moveToNext());{
+            } while (cursor.moveToNext());
+            {
                 cursor.close();
                 database.close();
             }
@@ -100,15 +101,15 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
-    public List<Person> getalliraniperson(){
+    public List<Person> getalliraniperson() {
 
-        SQLiteDatabase database=this.getReadableDatabase();
-        List<Person> data=new ArrayList<>();
-        String query="SELECT * FROM person WHERE category='irani'";
-        Cursor cursor=database.rawQuery(query,null);
-        if (cursor.moveToFirst()){
+        SQLiteDatabase database = this.getReadableDatabase();
+        List<Person> data = new ArrayList<>();
+        String query = "SELECT * FROM person WHERE category='irani'";
+        Cursor cursor = database.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
             do {
-                Person person=new Person();
+                Person person = new Person();
                 person.setId(cursor.getInt(cursor.getColumnIndex(info_db.DATA_ID)));
                 person.setCategory(cursor.getString(cursor.getColumnIndex(info_db.DATA_CATEGORY)));
                 person.setName(cursor.getString(cursor.getColumnIndex(info_db.DATA_NAME)));
@@ -117,7 +118,8 @@ public class Database extends SQLiteOpenHelper {
                 person.setImage(cursor.getString(cursor.getColumnIndex(info_db.DATA_IMAGE)));
                 person.setFav(cursor.getInt(cursor.getColumnIndex(info_db.DATA_FAV)));
                 data.add(person);
-            }while (cursor.moveToNext());{
+            } while (cursor.moveToNext());
+            {
                 cursor.close();
                 database.close();
             }
@@ -126,15 +128,15 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
-    public List<Person> getallforginperson(){
+    public List<Person> getallforginperson() {
 
-        SQLiteDatabase database=this.getReadableDatabase();
-        List<Person> data=new ArrayList<>();
-        String query="SELECT * FROM person WHERE category='foreign'";
-        Cursor cursor=database.rawQuery(query,null);
-        if (cursor.moveToFirst()){
+        SQLiteDatabase database = this.getReadableDatabase();
+        List<Person> data = new ArrayList<>();
+        String query = "SELECT * FROM person WHERE category='foreign'";
+        Cursor cursor = database.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
             do {
-                Person person=new Person();
+                Person person = new Person();
                 person.setId(cursor.getInt(cursor.getColumnIndex(info_db.DATA_ID)));
                 person.setCategory(cursor.getString(cursor.getColumnIndex(info_db.DATA_CATEGORY)));
                 person.setName(cursor.getString(cursor.getColumnIndex(info_db.DATA_NAME)));
@@ -143,7 +145,35 @@ public class Database extends SQLiteOpenHelper {
                 person.setImage(cursor.getString(cursor.getColumnIndex(info_db.DATA_IMAGE)));
                 person.setFav(cursor.getInt(cursor.getColumnIndex(info_db.DATA_FAV)));
                 data.add(person);
-            }while (cursor.moveToNext());{
+            } while (cursor.moveToNext());
+            {
+                cursor.close();
+                database.close();
+            }
+        }
+        return data;
+
+    }
+
+    public List<Person> getallfavperson() {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        List<Person> data = new ArrayList<>();
+        String query = "SELECT * FROM person WHERE fav=1";
+        Cursor cursor = database.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
+            do {
+                Person person = new Person();
+                person.setId(cursor.getInt(cursor.getColumnIndex(info_db.DATA_ID)));
+                person.setCategory(cursor.getString(cursor.getColumnIndex(info_db.DATA_CATEGORY)));
+                person.setName(cursor.getString(cursor.getColumnIndex(info_db.DATA_NAME)));
+                person.setField(cursor.getString(cursor.getColumnIndex(info_db.DATA_FIELD)));
+                person.setDisc(cursor.getString(cursor.getColumnIndex(info_db.DATA_DISK)));
+                person.setImage(cursor.getString(cursor.getColumnIndex(info_db.DATA_IMAGE)));
+                person.setFav(cursor.getInt(cursor.getColumnIndex(info_db.DATA_FAV)));
+                data.add(person);
+            } while (cursor.moveToNext());
+            {
                 cursor.close();
                 database.close();
             }
@@ -153,5 +183,26 @@ public class Database extends SQLiteOpenHelper {
     }
 
 
+    public int fav_value(int id) {
 
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT " + info_db.DATA_FAV + " FROM person WHERE " + info_db.DATA_ID + "=" + id + "";
+        int value = 0;
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
+            value = cursor.getInt(cursor.getColumnIndex(info_db.DATA_FAV));
+            do {
+
+            } while (cursor.moveToNext());
+        }
+        db.close();
+        return value;
+    }
+
+    public void fav(int status, int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "UPDATE person SET " + info_db.DATA_FAV + "=" + status + " WHERE " + info_db.DATA_ID + "=" + id + "";
+        db.execSQL(query);
+        db.close();
+    }
 }
