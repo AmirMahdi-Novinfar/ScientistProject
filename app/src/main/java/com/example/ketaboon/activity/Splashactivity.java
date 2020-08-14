@@ -34,7 +34,7 @@ public  class  Splashactivity extends AppCompatActivity {
                     startActivity(new Intent(Splashactivity.this, MainActivity.class));
                     finish();
                 }
-            }, 4000);
+            }, 2000);
         } else if (ISLOGIN == false) {
             Handler jh = new Handler();
 
