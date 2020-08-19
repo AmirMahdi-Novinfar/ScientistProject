@@ -47,39 +47,7 @@ public class MainActivity extends AppCompatActivity {
         confignavigationview();
         configbuttonnavigationview();
         getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Homefragment()).commit();
-
-       if (!havenetwork()) {
-            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setCancelable(false);
-            builder.setTitle("خطا در شبکه");
-            builder.setMessage("لطفا گوشی خود را به اینترنت مجهز نمایید.");
-            builder.setIcon(R.drawable.networkerror);
-            builder.setNegativeButton("خروج", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    finish();
-                }
-            });
-
-             builder.setNeutralButton("تلاش دوباره", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    if (!havenetwork()){
-                        builder.show();
-                    }
-                    else if (havenetwork()){
-                      dialogInterface.cancel();
-                    }
-                }
-            });
-           builder.show();
-        }
-
-
-
-
     }
-
     private void setupviews() {
         b1_nav = (BottomNavigationView) findViewById(R.id.btn_nav);
         frameLayout = (FrameLayout) findViewById(R.id.fram);
@@ -161,27 +129,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
-
-    private boolean havenetwork() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-        final NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        boolean wifi=false;
-        boolean datamo=false;
-
-        if (networkInfo != null && networkInfo.isConnected()) {
-            wifi=networkInfo.getType()==ConnectivityManager.TYPE_WIFI;
-            datamo=networkInfo.getType()==ConnectivityManager.TYPE_MOBILE;
-            if (wifi){
-                TastyToast.makeText(this,"شما به وای فای متصل هستید ",TastyToast.LENGTH_LONG,TastyToast.INFO).show();
-            }else if (datamo){
-                TastyToast.makeText(this,"شما به اینترنت سیم کارت متصل هستید ",TastyToast.LENGTH_LONG,TastyToast.INFO).show();
-
-            }
-            return true;
-        } else {
-            return false;
-        }
     }
 }
 
