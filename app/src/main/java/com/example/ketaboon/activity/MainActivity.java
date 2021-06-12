@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.ketaboon.R;
 import com.example.ketaboon.fragment.Homefragment;
 import com.example.ketaboon.fragment.Profilefragment;
@@ -36,24 +37,89 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ImageView imageButton;
 
+    MeowBottomNavigation meowBottomNavigation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawerlayout);
+
         toolbar = (Toolbar) findViewById(R.id.toolbaramir);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
         setupviews();
         confignavigationview();
-        configbuttonnavigationview();
+        configbuttonnavigationview2();
         getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Homefragment()).commit();
     }
+
+    private void configbuttonnavigationview2() {
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_home));
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_search));
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_person_pin));
+
+        meowBottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
+            @Override
+            public void onShowItem(MeowBottomNavigation.Model item) {
+
+            }
+        });
+
+        meowBottomNavigation.setCount(1,"10");
+        meowBottomNavigation.show(1,true);
+        meowBottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
+            @Override
+            public void onClickItem(MeowBottomNavigation.Model item) {
+                int ali = item.getId();
+                switch (ali) {
+
+                    case 1:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Homefragment()).commit();
+                        break;
+                    case 2:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Searchefragment()).commit();
+                        break;
+                    case 3:
+
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Profilefragment()).commit();
+
+                        break;
+
+                }
+
+            }
+        });
+       meowBottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
+           @Override
+           public void onReselectItem(MeowBottomNavigation.Model item) {
+               int ali = item.getId();
+               switch (ali) {
+
+                   case 1:
+                       getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Homefragment()).commit();
+                       break;
+                   case 2:
+                       getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Searchefragment()).commit();
+                       break;
+                   case 3:
+
+                       getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Profilefragment()).commit();
+
+                       break;
+
+               }
+           }
+       });
+
+    }
+
     private void setupviews() {
-        b1_nav = (BottomNavigationView) findViewById(R.id.btn_nav);
+       // b1_nav = (BottomNavigationView) findViewById(R.id.btn_nav);
         frameLayout = (FrameLayout) findViewById(R.id.fram);
         navigationView = (NavigationView) findViewById(R.id.nav_main);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         imageButton = (ImageView) findViewById(R.id.nav_btn);
+        meowBottomNavigation = (MeowBottomNavigation) findViewById(R.id.btn_najv);
     }
 
     private void confignavigationview() {
