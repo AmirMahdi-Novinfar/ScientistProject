@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@drawable/login_back"
     tools:context=".activity.LoginActivity">
 
     <LinearLayout
@@ -41,10 +41,11 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="282dp"
         android:fontFamily="@font/dfds"
+        android:textColor="@android:color/white"
         android:hint="نام خود را وارد کنید"
         android:maxLength="15"
         android:maxLines="1"
-        android:textColorHint="@android:color/black">
+        android:textColorHint="#FFFFFF">
 
 
     </EditText>

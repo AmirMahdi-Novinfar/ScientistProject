@@ -50,7 +50,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="3dp"
             android:baselineAligned="false"
-            android:fontFamily="@font/dfds"
+            android:fontFamily="@font/yekan"
             android:text="امیرمهدی"
             android:textColor="@android:color/white"
             android:textSize="25dp" />
@@ -60,22 +60,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/img_bg"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="193dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="57dp"
             android:baselineAligned="false"
-            android:fontFamily="@font/dfds"
+            android:fontFamily="@font/yekan"
             android:text="فیزیک"
-
             android:textColor="@android:color/white"
             android:textSize="20dp" />
     </RelativeLayout>
 
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_below="@id/top_la"
         android:layout_gravity="right"
         android:layout_margin="15dp">
@@ -86,19 +83,23 @@
             android:layout_height="match_parent"
             android:text="در این قسمت توضیحات داشنمندان داده می شود."
             android:textColor="@android:color/white"
+            android:fontFamily="@font/yekan"
 
+            android:layout_marginTop="20dp"
 
             ></TextView>
-    </ScrollView>
 
+
+
+    </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="390dp"
-        android:layout_marginLeft="20dp"
         android:id="@+id/fav_btn"
-        android:src="@drawable/ic_favorite_border_black_24dp"
-        >
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/ic_favorite_border_black_24dp">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 </LinearLayout>

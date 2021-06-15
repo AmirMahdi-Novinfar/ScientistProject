@@ -1,9 +1,11 @@
 package com.example.ketaboon.activity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -54,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configbuttonnavigationview2() {
-        meowBottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_home));
-        meowBottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_search));
-        meowBottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_person_pin));
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_home));
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_search));
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(3, R.drawable.ic_person_pin));
 
         meowBottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
@@ -65,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        meowBottomNavigation.setCount(1,"10");
-        meowBottomNavigation.show(1,true);
+        meowBottomNavigation.setCount(1, "10");
+        meowBottomNavigation.show(1, true);
         meowBottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
@@ -89,32 +91,32 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-       meowBottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
-           @Override
-           public void onReselectItem(MeowBottomNavigation.Model item) {
-               int ali = item.getId();
-               switch (ali) {
+        meowBottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
+            @Override
+            public void onReselectItem(MeowBottomNavigation.Model item) {
+                int ali = item.getId();
+                switch (ali) {
 
-                   case 1:
-                       getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Homefragment()).commit();
-                       break;
-                   case 2:
-                       getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Searchefragment()).commit();
-                       break;
-                   case 3:
+                    case 1:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Homefragment()).commit();
+                        break;
+                    case 2:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Searchefragment()).commit();
+                        break;
+                    case 3:
 
-                       getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Profilefragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Profilefragment()).commit();
 
-                       break;
+                        break;
 
-               }
-           }
-       });
+                }
+            }
+        });
 
     }
 
     private void setupviews() {
-       // b1_nav = (BottomNavigationView) findViewById(R.id.btn_nav);
+        // b1_nav = (BottomNavigationView) findViewById(R.id.btn_nav);
         frameLayout = (FrameLayout) findViewById(R.id.fram);
         navigationView = (NavigationView) findViewById(R.id.nav_main);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
@@ -160,6 +162,13 @@ public class MainActivity extends AppCompatActivity {
 
                         getSupportFragmentManager().beginTransaction().replace(R.id.fram, new Profilefragment()).commit();
                         drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.home_btn_a:
+
+                        Intent intent =new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse("https://iamnovinfar.ir"));
+                        startActivity(intent);
                         break;
 
 
