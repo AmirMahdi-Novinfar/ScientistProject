@@ -38,7 +38,7 @@ public class RecyclerviewProfileFragment extends RecyclerView.Adapter {
         final Itemviewholder itemviewholder = (Itemviewholder) holder;
 
         itemviewholder.name.setText(personList.get(position).getName());
-        Picasso.with(context).load(personList.get(position).getImage())
+        Picasso.get().load(personList.get(position).getImage())
                 .resize(128, 128)
                 .into(itemviewholder.imageView);
         itemviewholder.cardView.setOnClickListener(new View.OnClickListener() {

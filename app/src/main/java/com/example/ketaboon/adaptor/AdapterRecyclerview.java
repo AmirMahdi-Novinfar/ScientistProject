@@ -40,7 +40,7 @@ public class AdapterRecyclerview extends RecyclerView.Adapter {
         itemviewholder.linearLayout.setAnimation(AnimationUtils.loadAnimation(context,R.anim.animforrec));
         itemviewholder.name.setText(personList.get(position).getName());
         itemviewholder.field.setText(personList.get(position).getField());
-        Picasso.with(context).load(personList.get(position).getImage())
+        Picasso.get().load(personList.get(position).getImage())
                 .resize(128,128)
                 .into(itemviewholder.imageView);
         itemviewholder.linearLayout.setOnClickListener(new View.OnClickListener() {
