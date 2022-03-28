@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="430dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+    android:background="@drawable/back_about_us">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:src="@mipmap/ic_launcher">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/txt_name_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_about"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/aviny"
+        android:text="اپلیکیشن کتابون "
+        android:textColor="#040000"
+        android:textSize="30sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resiurce"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/aviny"
+        android:text="ورژن 1"
+        android:textColor="#150000"
+        android:textSize="26sp">
+
+    </TextView>
+
+
+
+    <TextView
+        android:id="@+id/resiurce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_name_app"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/aviny"
+        android:text="منابع مطالب :ویکیپدیای فارسی "
+        android:textColor="#040000"
+        android:textSize="25sp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="Copyright © 2020"
+        android:textColor="#515050"
+
+        android:textAllCaps="true"
+        android:id="@+id/aaaaadfe"
+        android:textSize="19sp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/aaaaadfe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/website"
+        android:text="WebSite:\nwww.iamnovinfar.ir"
+        android:textColor="#515050"
+        android:textSize="20sp">
+
+    </TextView>
+
+
+</RelativeLayout>

@@ -2,6 +2,7 @@ package com.example.ketaboon.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,6 +48,9 @@ public class ContentActivity extends AppCompatActivity {
         name_txt= findViewById(R.id.name_id_content);
         field_txt= findViewById(R.id.fild_id_content);
         disc_txt= findViewById(R.id.disk2_danshmand);
+        disc_txt.setMovementMethod(new ScrollingMovementMethod());
+
+
         floatingActionButton= findViewById(R.id.fav_btn);
     }
     private void setupdata(){

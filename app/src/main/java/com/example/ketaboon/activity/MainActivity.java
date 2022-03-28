@@ -1,5 +1,6 @@
 package com.example.ketaboon.activity;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -166,10 +167,29 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.home_btn_a:
 
-                        Intent intent =new Intent(Intent.ACTION_VIEW);
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse("https://iamnovinfar.ir"));
                         startActivity(intent);
                         break;
+                    case R.id.Source:
+
+
+                        Dialog dialog=new Dialog(MainActivity.this);
+                        dialog.setContentView(R.layout.source_page);
+
+                        TextView textView=dialog.findViewById(R.id.resiurce);
+                        textView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                String url = "https://www.iamnovinfar.ir";
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                            }
+                        });
+
+
+                        dialog.show();
 
 
                 }

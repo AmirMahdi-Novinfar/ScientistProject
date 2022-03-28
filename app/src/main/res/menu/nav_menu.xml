@@ -5,6 +5,7 @@
     <item  android:title="خانه" android:id="@+id/home_btn_h" android:icon="@drawable/ic_home"></item>
     <item android:title="جستجو" android:id="@+id/home_btn_s" android:icon="@drawable/ic_search"></item>
     <item android:title="پروفایل" android:id="@+id/home_btn_p" android:icon="@drawable/ic_person_pin"></item>
+    <item android:title="منبع" android:id="@+id/Source" android:icon="@drawable/_067489_user_resource_human_icon"></item>
     <item android:title="تماس با ما" android:id="@+id/home_btn_a" android:icon="@drawable/ic_call"></item>
 
 

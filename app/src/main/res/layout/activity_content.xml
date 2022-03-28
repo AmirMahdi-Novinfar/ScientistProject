@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -70,36 +70,33 @@
     </RelativeLayout>
 
 
-    <ScrollView
+    <TextView
+        android:id="@+id/disk2_danshmand"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_below="@id/top_la"
-        android:layout_gravity="right"
-        android:layout_margin="15dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/top_la"
+        android:fontFamily="@font/yekan"
+        android:paddingRight="7dp"
+        android:scrollbars="vertical"
+        android:text="در این قسمت توضیحات داشنمندان داده می شود."
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
 
-        <TextView
-            android:id="@+id/disk2_danshmand"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="در این قسمت توضیحات داشنمندان داده می شود."
-            android:textColor="@android:color/white"
-            android:fontFamily="@font/yekan"
-
-            android:layout_marginTop="20dp"
-
-            ></TextView>
+        ></TextView>
 
 
-
-    </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fav_btn"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_alignParentBottom="true"
 
         android:src="@drawable/ic_favorite_border_black_24dp">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-</LinearLayout>
+</RelativeLayout>
