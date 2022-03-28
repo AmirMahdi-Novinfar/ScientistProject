@@ -11,10 +11,10 @@
         android:label="Ketaboon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ContentActivity"></activity>
-        <activity android:name=".activity.LoginActivity" />
+        <activity android:name="ir.iamnovinfar.ketaboon.activity.ContentActivity"></activity>
+        <activity android:name="ir.iamnovinfar.ketaboon.activity.LoginActivity" />
         <activity
-            android:name=".activity.Splashactivity"
+            android:name="ir.iamnovinfar.ketaboon.activity.Splashactivity"
             android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name="ir.iamnovinfar.ketaboon.activity.MainActivity"
             android:label=""
 
          >

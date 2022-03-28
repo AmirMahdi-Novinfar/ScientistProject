@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/content_layout_back"
     android:orientation="vertical"
-    tools:context=".activity.ContentActivity">
+    tools:context="ir.iamnovinfar.ketaboon.activity.ContentActivity">
 
     <RelativeLayout
         android:id="@+id/top_la"
