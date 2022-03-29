@@ -65,7 +65,10 @@ public class ContentActivity extends AppCompatActivity {
         String field= intent.getExtras().getString("field");
         String disk= intent.getExtras().getString("disk");
         id= intent.getExtras().getInt("id");
-        Picasso.get().load(img).into(imageView);
+        Picasso.Builder picasso=new Picasso.Builder(this);
+
+
+        Picasso.get().load(img).error(R.drawable.user_error).into(imageView);
         name_txt.setText(name);
         field_txt.setText(field);
         disc_txt.setText(disk);

@@ -41,6 +41,7 @@ public class AdapterRecyclerview extends RecyclerView.Adapter {
         itemviewholder.name.setText(personList.get(position).getName());
         itemviewholder.field.setText(personList.get(position).getField());
         Picasso.get().load(personList.get(position).getImage())
+                .error(R.drawable.user_error)
                 .resize(128,128)
                 .into(itemviewholder.imageView);
         itemviewholder.linearLayout.setOnClickListener(new View.OnClickListener() {
