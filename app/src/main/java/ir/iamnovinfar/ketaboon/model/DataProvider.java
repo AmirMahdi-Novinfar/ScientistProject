@@ -1,6 +1,5 @@
 package ir.iamnovinfar.ketaboon.model;
 
-import com.example.ketaboon.R;
 
 import java.util.ArrayList;
 import java.util.List;

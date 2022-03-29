@@ -18,7 +18,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.example.ketaboon.R;
+
+import ir.iamnovinfar.ketaboon.R;
 import ir.iamnovinfar.ketaboon.fragment.Homefragment;
 import ir.iamnovinfar.ketaboon.fragment.Profilefragment;
 import ir.iamnovinfar.ketaboon.fragment.Searchefragment;

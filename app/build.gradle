@@ -5,7 +5,7 @@ android {
     buildToolsVersion '30.0.3'
 
     defaultConfig {
-        applicationId "com.example.ketaboon"
+        applicationId "ir.iamnovinfar.ketaboon"
         minSdkVersion 20
         versionCode 1
         versionName "1.0"

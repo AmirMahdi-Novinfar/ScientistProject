@@ -13,8 +13,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.ketaboon.R;
 import com.sdsmdg.tastytoast.TastyToast;
+
+import ir.iamnovinfar.ketaboon.R;
 
 
 public class LoginActivity extends Activity {

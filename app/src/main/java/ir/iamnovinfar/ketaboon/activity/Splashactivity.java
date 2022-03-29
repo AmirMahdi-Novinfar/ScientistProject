@@ -12,7 +12,8 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ketaboon.R;
+import ir.iamnovinfar.ketaboon.R;
+
 
 public class Splashactivity extends AppCompatActivity {
 

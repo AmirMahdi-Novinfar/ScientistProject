@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import ir.iamnovinfar.ketaboon.Database.Database;
-import com.example.ketaboon.R;
+import ir.iamnovinfar.ketaboon.R;
 import ir.iamnovinfar.ketaboon.adaptor.AdapterRecyclerview;
 import ir.iamnovinfar.ketaboon.model.Person;
 

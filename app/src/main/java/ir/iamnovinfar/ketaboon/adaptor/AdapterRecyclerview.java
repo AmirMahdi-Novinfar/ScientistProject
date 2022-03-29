@@ -10,7 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.ketaboon.R;
+
+import ir.iamnovinfar.ketaboon.R;
 import ir.iamnovinfar.ketaboon.activity.ContentActivity;
 import ir.iamnovinfar.ketaboon.model.Person;
 import com.squareup.picasso.Picasso;

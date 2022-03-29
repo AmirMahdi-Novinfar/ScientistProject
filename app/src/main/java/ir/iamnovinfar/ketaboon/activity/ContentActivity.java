@@ -10,12 +10,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import ir.iamnovinfar.ketaboon.Database.Database;
-import com.example.ketaboon.R;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import ir.iamnovinfar.ketaboon.R;
 
 public class ContentActivity extends AppCompatActivity {
     ImageView back;
